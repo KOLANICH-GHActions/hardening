@@ -1,0 +1,13 @@
+name: hardening
+description: |
+  Hardens the Ubuntu image used a bit.
+author: KOLANICH
+runs:
+  using: "composite"
+  steps:
+    - run: bash ${{github.action_path}}/action.sh
+      shell: bash  # fuck, this doesn't guarantee that the script is called with bash. Has to call bash explicitly
+
+branding:
+  icon: check-square
+  color: green
